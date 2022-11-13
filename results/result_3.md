@@ -1,5 +1,5 @@
 ```
-> python -m unittest -v tests/test_fit_transform_unittest.py
+>>> python -m unittest -v tests/test_fit_transform_unittest.py
 test_fit_transform_1 (tests.test_fit_transform_unittest.TestOHE)
 Test 1 with assertEqual ... ok
 test_fit_transform_2 (tests.test_fit_transform_unittest.TestOHE)

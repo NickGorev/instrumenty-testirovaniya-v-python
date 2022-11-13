@@ -1,5 +1,5 @@
 ```
-> python -m pytest -v tests/test_fit_transform_pytest.py
+>>> python -m pytest -v tests/test_fit_transform_pytest.py
 =============================== test session starts ===============================
 platform win32 -- Python 3.10.7, pytest-7.2.0, pluggy-1.0.0 -- C:\Users\Nick\Documents\AVITO\python\instrumenty-testirovaniya-v-python\venv\Scripts\python.exe
 cachedir: .pytest_cache
