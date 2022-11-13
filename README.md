@@ -55,7 +55,7 @@ python -m pytest -v tests/test_what_is_year_now.py --cov --cov-report html
 ```
 Команда и результаты запуска скопированы в файл [results/result_5.md](results/result_5.md)
 
-Отчёт о покрытии содержится в директории [htmlcov](htmlcov) в файле [htmlcov/what_is_year_now_py.html](htmlcov/what_is_year_now_py.html).
+Отчёт о покрытии содержится в директории [htmlcov](htmlcov) в файле [htmlcov/what_is_year_now_py.html](https://htmlpreview.github.io/?https://github.com/NickGorev/instrumenty-testirovaniya-v-python/blob/my-tests/htmlcov/what_is_year_now_py.html).
 
 Из отчёта видно, что тесты покрывают 100% кода.
 
