@@ -34,8 +34,8 @@ def encode(message: str) -> str:
     '--... ...--'
     >>> encode('A')
     '.-'
-    >>> encode('HELLO WORLD')
-    '.... . .-.. .-.. ---   .-- --- .-. .-.. -..'
+    >>> encode('AAAAAAAAAAAAAAAAAAAAAAAA') # doctest: +ELLIPSIS
+    '.- ... .-'
     >>> encode('SOS')
     '... ---   ...'
     >>> encode('sos')
