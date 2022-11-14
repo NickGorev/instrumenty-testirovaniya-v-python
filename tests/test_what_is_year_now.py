@@ -28,7 +28,6 @@ def test_get_cases_parameric(source_date, result):
             f'{{"currentDateTime": "{source_date}"}}'
         context_mamager.__enter__.return_value = context_mamager
         mock_urlopen.return_value = context_mamager
-        print(f"{what_is_year_now()=}")
         assert what_is_year_now() == result
 
 
