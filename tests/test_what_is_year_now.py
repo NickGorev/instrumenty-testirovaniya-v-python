@@ -1,6 +1,7 @@
 from what_is_year_now import what_is_year_now
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 import pytest
+from io import StringIO
 
 
 @pytest.mark.parametrize(
@@ -23,11 +24,8 @@ def test_get_cases_parameric(source_date, result):
     date formats: YYYY-MM-DD, DD.MM.YYYY
     """
     with patch("what_is_year_now.urllib.request.urlopen") as mock_urlopen:
-        context_mamager = MagicMock()
-        context_mamager.read.return_value = \
-            f'{{"currentDateTime": "{source_date}"}}'
-        context_mamager.__enter__.return_value = context_mamager
-        mock_urlopen.return_value = context_mamager
+        json_str = f'{{"currentDateTime": "{source_date}"}}'
+        mock_urlopen.return_value = StringIO(json_str)
         assert what_is_year_now() == result
 
 
@@ -48,11 +46,8 @@ def test_get_cases_parameric(source_date, result):
 def test_get_cases_exception(source_date):
     """unknown date format"""
     with patch("what_is_year_now.urllib.request.urlopen") as mock_urlopen:
-        context_mamager = MagicMock()
-        context_mamager.read.return_value = \
-            f'{{"currentDateTime": "{source_date}"}}'
-        context_mamager.__enter__.return_value = context_mamager
-        mock_urlopen.return_value = context_mamager
+        json_str = f'{{"currentDateTime": "{source_date}"}}'
+        mock_urlopen.return_value = StringIO(json_str)
 
         with pytest.raises(ValueError) as err:
             what_is_year_now()
